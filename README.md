@@ -1,5 +1,9 @@
 # UPI Offline Mesh — Demo
 
+**[Open the live demo](https://ravi-upi-offline-mesh.onrender.com/?v=61cff97)**
+
+Hosted on Render. The free service may take a little time to wake up after inactivity. This is a portfolio simulation with fictional balances; it does not connect to banking networks or transfer real money. Balances reset on server restart.
+
 A Spring Boot backend that demonstrates **offline UPI payments routed through a Bluetooth-style mesh network**. You're in a basement with zero connectivity. You send your friend ₹500. Your phone encrypts the payment, broadcasts it to nearby phones, and the packet hops device-to-device until *some* phone walks outside, gets 4G, and silently uploads it to this backend. The backend decrypts, deduplicates, and settles.
 
 This repo is the **server side** of that system, plus a software simulator of the mesh so you can demo the whole flow on a single laptop without any real Bluetooth hardware.
@@ -397,4 +401,3 @@ For a college / portfolio project: name the concept honestly as **"mesh-routed d
 **`mvnw.cmd : The term 'mvnw.cmd' is not recognized`** — On PowerShell you need to prefix with `.\`: `.\mvnw.cmd spring-boot:run`.
 
 **Tests fail intermittently** — The concurrency test is timing-sensitive. If it ever flakes, run it 3x; if it consistently fails on your hardware, file the actual failure output.
-
